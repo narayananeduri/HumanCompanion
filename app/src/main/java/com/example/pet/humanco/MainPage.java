@@ -1,6 +1,9 @@
 package com.example.pet.humanco;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +11,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -85,8 +89,7 @@ public class MainPage extends AppCompatActivity {
 
     public void LogOut_OnClick(MenuItem item)
     {
-        session.logoutUser();
-       overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+        IsPermission_Available();
     }
 
     public void Adve_On_Click(MenuItem item)
@@ -104,5 +107,17 @@ public class MainPage extends AppCompatActivity {
     {
         startActivity(new Intent(this,My_PromotionsAd.class));
         overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+    }
+    public void IsPermission_Available()
+    {
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert connMgr != null;
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            session.logoutUser();
+            overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+        } else {
+            Toast.makeText(this, "Please check your internet connection", Toast.LENGTH_SHORT).show();
+        }
     }
 }
