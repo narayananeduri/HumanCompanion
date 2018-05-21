@@ -83,4 +83,8 @@
 
     <!--ads Link-->
     <string name="adsCode">ca-app-pub-3940256099942544/1033173713</string>
+
+    <!--<My Profile>-->
+    <string name="change_password">Change Password</string>
+    <string name="update_profile">Update Profile</string>
 </resources>
