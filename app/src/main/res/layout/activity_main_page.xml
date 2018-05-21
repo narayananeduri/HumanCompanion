@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tabMenuBackGround"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/TextBoxColor"
+            app:tabSelectedTextColor="@color/TabSelectedText"
+            >
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/ti1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/search_pet_tab"
+                app:tabIndicatorColor="@android:color/white"
+                />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/ti2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_your_pet_tab" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/ti3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/my_promotions_tab" />
+        </android.support.design.widget.TabLayout>
+
+
+    <fragment
+        android:layout_marginTop="2dp"
+        android:id="@+id/fg1"
+        class="com.example.pet.humanco.FragmentSearchPet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

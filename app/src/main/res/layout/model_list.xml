@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/pageBackground"
+    card_view:cardCornerRadius="1dp"
+    card_view:cardElevation="0.5dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="left"
+        android:orientation="horizontal"
+        tools:ignore="RtlHardcoded">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="#ecf0f5"
+            android:scaleType="fitXY"
+            android:src="@drawable/a" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="top|center"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:text="Name : "
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <TextView
+
+                        android:id="@+id/type_M"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:text="aaaaaaaaaaaaaaaaaaaa"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:text="Breed : "
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:id="@+id/breed_M"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                        android:textColor="#5f6163"
+                        android:textSize="12sp" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:text="Location : "
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/location_M"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                        android:textColor="#5f6163"
+                        android:textSize="12sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="center"
+                        android:text="Age : "
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/age_M"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="center"
+                        android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                        android:textColor="#5f6163"
+                        android:textSize="12sp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

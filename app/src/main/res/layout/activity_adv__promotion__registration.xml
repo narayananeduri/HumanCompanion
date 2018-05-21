@@ -1,0 +1,98 @@
+<android.support.v7.widget.CardView android:id="@+id/card_view"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/pageBackground"
+    card_view:cardCornerRadius="1dp"
+    android:layout_gravity="center"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView android:layout_width="match_parent"
+android:layout_height="wrap_content"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_gravity="center">
+
+
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/TabSelectedText"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:id="@+id/input_ShopNameErr">
+        <EditText
+            android:id="@+id/input_ShopName"
+            style="@style/EditText"
+            android:inputType="textEmailAddress"
+            android:hint="@string/shop_name_apr"
+            android:textColor="#000"
+            android:layout_gravity="center" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:id="@+id/input_PhoneErr">
+        <EditText
+            style="@style/EditText"
+            android:inputType="phone"
+            android:hint="@string/phone_apr"
+            android:maxLength="10"
+            android:layout_gravity="center"
+            android:id="@+id/input_phone"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:id="@+id/input_LocationErr">
+        <EditText
+            android:id="@+id/input_Location"
+            style="@style/EditText"
+            android:inputType="textPersonName"
+            android:hint="@string/location_apr"
+            android:textColor="#000"
+            android:layout_gravity="center" />
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+
+        style="@style/EditText"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:id="@+id/promotionsAdImageView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="150dp"
+            android:layout_gravity="left"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            tools:ignore="RtlHardcoded" />
+        <Button
+            android:layout_width="150dp"
+            android:layout_weight="0"
+            android:layout_gravity="end|center"
+            android:layout_height="wrap_content"
+            android:text="@string/take_a_picture_Adv_Pet"
+            android:id="@+id/capturedImage_Btn_PAD"
+            style="@style/buttons"/>
+    </LinearLayout>
+    <Button
+        style="@style/buttons"
+        android:padding="12dp"
+        android:text="@string/submit_apr"
+        android:id="@+id/Submit"/>
+
+
+</LinearLayout>
+</ScrollView>
+</android.support.v7.widget.CardView>

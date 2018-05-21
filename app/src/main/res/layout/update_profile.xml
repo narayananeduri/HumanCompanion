@@ -1,0 +1,80 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="20dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:id="@+id/Name_Input">
+        <EditText android:id="@+id/input_name_Update"
+            style="@style/EditText"
+            android:inputType="textPersonName"
+            android:hint="@string/name_signup"
+            android:textColor="@color/TextBoxColor"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <!--  Email Label -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:id="@+id/Email_Id_Input">
+        <EditText android:id="@+id/input_email_Update"
+            style="@style/EditText"
+            android:inputType="textEmailAddress"
+            android:focusable="false"
+            android:hint="@string/email_signup"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <!-- mobile number -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:id="@+id/Mobile_Input">
+        <EditText android:id="@+id/input_mobile_Update"
+            android:inputType="number"
+            android:hint="@string/mobile_number_signup"
+            style="@style/EditText"
+            android:layout_marginBottom="10dp"/>
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginBottom="20dp">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_update_Update"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:textColor="@color/TabSelectedText"
+            android:background="@drawable/shape"
+            android:text="@string/update_acount_profile"
+            android:layout_gravity="center"
+            android:ems="15"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_Cancel_Update"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:textColor="@color/TabSelectedText"
+            android:layout_marginLeft="10dp"
+            android:padding="12dp"
+            android:text="@string/cancel_Profile"
+            android:layout_gravity="center"
+            android:ems="15"/>
+    </LinearLayout>
+</LinearLayout>

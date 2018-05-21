@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/my_Profile"
+        android:onClick="myProfile"
+        android:title="@string/menu_My_Profile"
+        android:icon="@drawable/myprofile" />
+
+    <item android:id="@+id/my_AD"
+        android:title="@string/menu_Advertisements"
+        android:onClick="Adve_On_Click"
+        android:icon="@drawable/myprofile"/>
+
+    <item android:id="@+id/my_Promotions"
+        android:title="@string/menu_Promotions"
+        android:onClick="promotions_OnClick"
+        android:icon="@drawable/myprofile"/>
+
+    <item android:id="@+id/logout"
+        android:title="@string/menu_Logout"
+        android:onClick="LogOut_OnClick"
+        android:icon="@drawable/myprofile"/>
+</menu>

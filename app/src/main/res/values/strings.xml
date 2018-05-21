@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">HumanCompanion</string>
+    <!-- <SignUp Data>-->
+    <string name="user_name">Email/Phone No</string>
+    <string name="Password">Password</string>
+    <string name="button_logIn">Login</string>
+    <string name="Search_Pet">Search By Petname/Breed/Location</string>
+    <string name="no_account">No account yet..? </string>
+    <string name="Create_account">Create one</string>
+    <!-- </SignUp>-->
+    <!-- <Promotions Data>-->
+    <string name="promotions_Name">Name </string>
+    <string name="promotions_ShopName">Shop Name</string>
+    <string name="promotions_Phone">Phone Number</string>
+    <string name="promotions_Location">Location</string>
+    <string name="promotions_Location_Btn">Get Location</string>
+    <string name="promotions_Services_Provide">Services Provide</string>
+    <string name="promotions_Stock_Details">Stock Details</string>
+    <string name="promotions_Image_Clck_Button">Take Picture</string>
+    <string name="promotions_Submit">Submit</string>
+    <!-- </Promotions>-->
+    <!-- <Menu Data>-->
+    <string name="menu_My_Profile">My Profile</string>
+    <string name="menu_Advertisements">My Advertises</string>
+    <string name="menu_Promotions">My Promotions</string>
+    <string name="menu_Logout">Logout</string>
+    <!-- </Menu>-->
+
+    <!-- <SignUp>-->
+    <string name="create_account_signup">Create Account</string>
+    <string name="already_a_member_login_signup">Already a member? Login</string>
+    <string name="re_enter_password_signup">Re-enter Password</string>
+    <string name="password_signup">Password</string>
+    <string name="mobile_number_signup">Mobile Number</string>
+    <string name="email_signup">Email</string>
+    <string name="name_signup">Name</string>
+    <!-- </SignUp>-->
+    <!--<FragmentAdvPet_Pet>-->
+    <string name="type_Adv_Pet">Type</string>
+    <string name="breed_Adv_Pet">Breed</string>
+    <string name="age_Adv_Pet">Age</string>
+    <string name="male_Adv_Pet">Male</string>
+    <string name="female_Adv_Pet">Female</string>
+    <string name="description_Adv_Pet">Description</string>
+    <string name="take_a_picture_Adv_Pet"> Upload Image </string>
+    <string name="post_your_ad_Adv_Pet">Post Your Ad</string>
+    <string name="pet_gender_Adv_Pet">Pet Gender : </string>
+    <string name="adoption_Adv_Pet">Adoption : </string>
+    <string name="payment_Adv_Pet">Payment</string>
+    <string name="free_Adv_Pet">Free</string>
+    <string name="price_Adv_Pet">Price</string>
+    <string name="type_nameItem">Animal:</string>
+    <string name="breedItem">Breed:</string>
+    <string name="pet_ageItem">Pet Age:</string>
+    <string name="genderItem">Gender:</string>
+    <string name="descriptionItem">Description:</string>
+    <string name="adopteItem">Adopt:</string>
+    <string name="amountItem">Amount:</string>
+    <string name="locationItem">Location:</string>
+    <!--FragmentAdvPet_Pet>-->
+    <!-- <Tab Names>-->
+    <string name="add_your_pet_tab">Post Pet</string>
+    <string name="my_promotions_tab">Promotions</string>
+    <string name="search_pet_tab">Search pet</string>
+    <string name="shop_name_apr">Shop Name</string>
+    <string name="phone_apr">Phone</string>
+    <string name="location_apr">Location</string>
+    <string name="submit_apr">Submit</string>
+    <string name="service_PS">Service</string>
+    <string name="stock_PS">Stock</string>
+    <string name="submit_PS">Submit</string>
+    <string name="complete_PS">Complete</string>
+    <string name="update_acount_profile">Update</string>
+    <string name="update_profile_profile">Update Profile</string>
+    <string name="change_password_profile">Change password</string>
+    <string name="cancel_Profile">Cancel</string>
+    <string name="update_password_profile">update_password</string>
+    <string name="title_activity_pet_list_update">PetListUpdate</string>
+    <!-- </Tab Names>-->
+
+<!-- URL Strings -->
+    <string name="BasicURL">http://develecons.com/petsapi</string>
+
+    <!--ads Link-->
+    <string name="adsCode">ca-app-pub-3940256099942544/1033173713</string>
+</resources>
