@@ -36,6 +36,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -67,6 +69,8 @@ public class Adv_Promotion_Registration extends AppCompatActivity {
     private static final int STORAGE_PERMISSION_CODE = 2342;
     private static final int PICK_IMAGE = 22;
     private Bitmap bitmap;
+    AdView mAdView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +94,7 @@ public class Adv_Promotion_Registration extends AppCompatActivity {
         locationErr = findViewById(R.id.input_LocationErr);
         circleImageView = findViewById(R.id.promotionsAdImageView);
         captureImage = findViewById(R.id.capturedImage_Btn_PAD);
+        mAdView = findViewById(R.id.adView);
         session = new SessionManagement(getApplicationContext());
         HashMap<String, String> user = session.getUserDetails();
         name = user.get(SessionManagement.userId);
@@ -147,6 +152,8 @@ public class Adv_Promotion_Registration extends AppCompatActivity {
                 chooseFile();
             }
         });
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
