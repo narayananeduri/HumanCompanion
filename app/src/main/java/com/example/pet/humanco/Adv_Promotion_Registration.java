@@ -99,7 +99,7 @@ public class Adv_Promotion_Registration extends AppCompatActivity {
         HashMap<String, String> user = session.getUserDetails();
         name = user.get(SessionManagement.userId);
         Date date = Calendar.getInstance().getTime();
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         formattedDate = df.format(date);
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,9 +162,16 @@ public class Adv_Promotion_Registration extends AppCompatActivity {
             Uri fileUri = data.getData();
             try {
                 bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), fileUri);
-                circleImageView.setImageBitmap(bitmap);
-                imageData = "1";
-                flag = true;
+                if (bitmap.getRowBytes()<=5760) {
+                    circleImageView.setImageBitmap(bitmap);
+                    flag = true;
+                }
+                else
+                {
+                    Toast.makeText(this, "Image Size should not more than 500KB", Toast.LENGTH_SHORT).show();
+                }
+
+
                 //Log.e("imageData",imageData);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();

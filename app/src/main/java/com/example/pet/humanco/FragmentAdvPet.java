@@ -110,13 +110,7 @@ public class FragmentAdvPet extends Fragment {
         HashMap<String, String> user = session.getUserDetails();
         name = user.get(SessionManagement.userId);
         String_url = getString(R.string.BasicURL)+"/pets/save";
-        /*if (ImagelistItems.size() == 0) {
-            Log.e("ImagelistItems",""+ImagelistItems);
-            SubmitBtn.setVisibility(View.GONE);
-        } else {
-            Log.e("ImagelistItems!Empty",""+ImagelistItems);
-            SubmitBtn.setVisibility(View.VISIBLE);
-        }*/
+
         ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_dropdown_item_1line, gender);
         genderSpinner.setAdapter(arrayAdapter);
         genderSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -241,19 +235,30 @@ public class FragmentAdvPet extends Fragment {
             Uri fileUri = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getApplicationContext().getContentResolver(), fileUri);
-                PetImage petImage = new PetImage();
-                petImage.setBitimage(bitmap);
-                ImagelistItems.add(petImage);
-                LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View myView = inflater.inflate(R.layout.image_list_items, null);
-                ImageView img = myView.findViewById(R.id.SelectedImages1);
-                img.setImageBitmap(bitmap);
-                imageListView.addView(myView);
-                if (ImagelistItems.size() == 4) {
-                    captureImage.setVisibility(View.GONE);
-                } else {
-                    captureImage.setVisibility(View.VISIBLE);
+
+                if (bitmap.getRowBytes()<=5760)
+                {
+                    PetImage petImage = new PetImage();
+                    petImage.setBitimage(bitmap);
+                    ImagelistItems.add(petImage);
+                    LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    View myView = inflater.inflate(R.layout.image_list_items, null);
+                    ImageView img = myView.findViewById(R.id.SelectedImages1);
+                    img.setImageBitmap(bitmap);
+                    imageListView.addView(myView);
+                    if (ImagelistItems.size() == 4) {
+                        captureImage.setVisibility(View.GONE);
+                    } else {
+                        captureImage.setVisibility(View.VISIBLE);
+                    }
+//                    Log.e("ImageSize",""+bitmap.getRowBytes());
+//                    Toast.makeText(getContext(), "Low quality Image", Toast.LENGTH_SHORT).show();
                 }
+                else
+                {
+                    Toast.makeText(getContext(), "Image Size should not more than 500KB", Toast.LENGTH_SHORT).show();
+                }
+
 
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -293,7 +298,7 @@ public class FragmentAdvPet extends Fragment {
 
     private String getPath(Bitmap bitmap) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 50, byteArrayOutputStream);
         byte[] imgBytes = byteArrayOutputStream.toByteArray();
         return Base64.encodeToString(imgBytes, Base64.DEFAULT);
     }
