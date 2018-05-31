@@ -90,7 +90,7 @@
                 style="@style/EditText"
                 android:layout_gravity="center"
                 android:hint="@string/service_PS"
-                android:inputType="textEmailAddress"
+                android:inputType="textPersonName"
                 android:textColor="#000" />
         </android.support.design.widget.TextInputLayout>
 
@@ -106,7 +106,7 @@
                 style="@style/EditText"
                 android:layout_gravity="center"
                 android:hint="@string/stock_PS"
-                android:inputType="number"
+                android:inputType="textPersonName"
                 android:maxLength="4"
                 android:textColor="#000" />
         </android.support.design.widget.TextInputLayout>
