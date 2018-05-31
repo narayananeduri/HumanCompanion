@@ -79,7 +79,7 @@
     <!-- </Tab Names>-->
 
 <!-- URL Strings -->
-    <string name="BasicURL">http://develecons.com/petsapi</string>
+    <string name="BasicURL">http://humancompanion.com/admin/</string>
 
     <!--ads Link-->
     <string name="adsCode">ca-app-pub-3940256099942544/1033173713</string>
