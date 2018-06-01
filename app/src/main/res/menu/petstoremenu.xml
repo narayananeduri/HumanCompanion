@@ -17,6 +17,11 @@
         android:onClick="promotions_OnClick"
         android:icon="@drawable/myprofile"/>
 
+    <item android:id="@+id/about_Us"
+        android:title="@string/menu_aboutUs"
+        android:onClick="aboutUs_OnClick"
+        android:icon="@drawable/myprofile"/>
+
     <item android:id="@+id/logout"
         android:title="@string/menu_Logout"
         android:onClick="LogOut_OnClick"

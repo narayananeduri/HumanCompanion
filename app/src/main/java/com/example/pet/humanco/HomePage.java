@@ -73,4 +73,9 @@ public class HomePage extends AppCompatActivity {
         startActivity(new Intent(this, My_PromotionsAd.class));
         overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
     }
+
+    public void aboutUs_OnClick(MenuItem item) {
+        startActivity(new Intent(this, AboutActivity.class));
+        overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+    }
 }

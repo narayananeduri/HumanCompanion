@@ -23,6 +23,7 @@
     <string name="menu_My_Profile">My Profile</string>
     <string name="menu_Advertisements">My Advertises</string>
     <string name="menu_Promotions">My Promotions</string>
+    <string name="menu_aboutUs">About Us</string>
     <string name="menu_Logout">Logout</string>
     <!-- </Menu>-->
 
@@ -78,7 +79,7 @@
     <string name="title_activity_pet_list_update">PetListUpdate</string>
     <!-- </Tab Names>-->
 
-<!-- URL Strings -->
+    <!-- URL Strings -->
     <string name="BasicURL">http://humancompanion.com/admin/</string>
 
     <!--ads Link-->

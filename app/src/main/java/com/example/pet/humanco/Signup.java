@@ -107,7 +107,7 @@ public class Signup extends AppCompatActivity {
                     name.requestFocus();
                     Name.setError("Field Should not Empty");
                 } else {
-                    Name.setError("");
+
                     if (Email_S.isEmpty()) {
                         Email.requestFocus();
                         EmailId.setError("Field Should not Empty");
@@ -116,7 +116,7 @@ public class Signup extends AppCompatActivity {
                             Email.requestFocus();
                             EmailId.setError("Please Enter Email Format");
                         } else {
-                            EmailId.setError("");
+
                             if (mobile_S.isEmpty()) {
                                 mobile.requestFocus();
                                 Mobile_No.setError("Field Should not Empty");
@@ -126,7 +126,7 @@ public class Signup extends AppCompatActivity {
                                     Mobile_No.setError("Please Enter Correct Phone");
                                     mobile.setText("");
                                 } else {
-                                    Mobile_No.setError("");
+
                                     if (password_S.isEmpty()) {
                                         password.requestFocus();
                                         Password.setError("Field Should not Empty");
@@ -136,7 +136,7 @@ public class Signup extends AppCompatActivity {
                                             Password.setError("Password contains minimum 6 characters");
                                             password.setText("");
                                         } else {
-                                            Password.setError("");
+
                                             if (Re_EnterPassword_S.isEmpty()) {
                                                 Re_EnterPassword.requestFocus();
                                                 RE_EnterPassword.setError("Field Should not Empty");
@@ -150,7 +150,6 @@ public class Signup extends AppCompatActivity {
                                                         password.setText("");
 
                                                     } else {
-                                                        RE_EnterPassword.setError("");
                                                         IsPermission_Available();
 
 
