@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.pet.humanco">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hm.pet.humanco">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -21,7 +22,9 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:windowSoftInputMode="adjustResize">
+        android:debuggable="false"
+        android:windowSoftInputMode="adjustResize"
+        tools:ignore="HardcodedDebugMode">
         <activity
             android:name=".Login"
             android:label="Login"
