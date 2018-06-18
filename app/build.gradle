@@ -14,8 +14,8 @@ android {
         applicationId "com.hm.pet.humanco"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
     }
@@ -47,4 +47,5 @@ dependencies {
     implementation 'com.android.support:cardview-v7:23.3.0'
     implementation 'me.relex:circleindicator:1.2.2@aar'
     implementation 'com.google.android.gms:play-services-ads:15.0.1'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
 }

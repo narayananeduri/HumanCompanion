@@ -87,8 +87,7 @@
                             android:id="@+id/age_AD"
                             style="@style/EditText"
                             android:hint="@string/age_Adv_Pet"
-                            android:maxLength="2"
-                            android:inputType="number" />
+                            android:inputType="text" />
 
                     </android.support.design.widget.TextInputLayout>
 
