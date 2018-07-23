@@ -29,7 +29,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="center"
         android:gravity="top|center"
@@ -37,8 +37,13 @@
         android:layout_marginLeft="10dp">
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
             <TableRow>
+
+                <RatingBar
+                    android:id="@+id/ratingBar_PM"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:numStars="5" />
                 <TextView
                     android:id="@+id/RatingText"
                     android:visibility="gone"
@@ -50,13 +55,6 @@
                     android:textSize="18sp"
                     android:textColor="#000"
                     android:gravity="center"/>
-
-                <RatingBar
-                    android:id="@+id/ratingBar_PM"
-                    style="?android:attr/ratingBarStyleSmall"
-                    android:layout_gravity="center|end"
-                    android:layout_marginLeft="50dp"
-                    android:numStars="5" />
             </TableRow>
             <TableRow>
                 <TextView

@@ -3,25 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#ffff"
-    >
+    android:background="#ffff">
     <LinearLayout
         android:id="@+id/rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ecf0f5"
         android:orientation="vertical">
-        <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
-        </com.google.android.gms.ads.AdView>
+            card_view:cardBackgroundColor="@color/pageBackground"
+            card_view:cardCornerRadius="1dp"
+            card_view:cardUseCompatPadding="true">
+
+            <EditText
+                android:id="@+id/search_View_promotion"
+                style="@style/EditText"
+                android:layout_margin="3dp"
+
+                android:layout_weight="0"
+                android:background="@color/TabSelectedText"
+                android:drawableRight="@drawable/searchicon"
+                android:hint="Search By Area / Shop Name"
+                android:inputType="textPersonName"
+                android:padding="6dp" />
+        </android.support.v7.widget.CardView>
+
         <LinearLayout
             android:id="@+id/rl1"
             android:layout_width="match_parent"
@@ -39,17 +48,29 @@
 
             </ListView>
 
+
         </LinearLayout>
+
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/adv_Promotions_Click"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:clickable="true"
-        android:id="@+id/adv_Promotions_Click"
+        android:focusable="true"
         android:src="@android:drawable/ic_input_add"
-        app:layout_anchor="@+id/nestedScrollView"
-        android:focusable="true" />
+        app:layout_anchor="@+id/nestedScrollView" />
 
-
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
 </FrameLayout>
